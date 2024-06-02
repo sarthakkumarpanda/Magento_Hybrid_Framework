@@ -13,6 +13,9 @@ public WebDriver driver;
 	@FindBy(linkText = "My Orders")
 	private WebElement myorderslink;
 	
+	@FindBy(xpath = "//div[text() = 'Thank you for registering with Main Website Store.']")
+	private WebElement accountAcknowledgeMessage;
+	
 	
 	public MyAccountPage(WebDriver driver) {
 		this.driver = driver;
@@ -24,4 +27,11 @@ public WebDriver driver;
 		boolean displayStatus = myorderslink.isDisplayed();
 		return displayStatus;
 	}
+	
+	public boolean displayStatusOfAccountCreationMessagek() {
+		boolean displayStatus = accountAcknowledgeMessage.isDisplayed();
+		return displayStatus;
+	}
+	
+	
 }

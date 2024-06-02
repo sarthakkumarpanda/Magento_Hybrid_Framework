@@ -34,7 +34,7 @@ public class LoginTest extends TestBase	{
 	    }
 	    
 	    @Test(priority=1, dataProvider = "LoginMAGENTO", dataProviderClass = ExcelCode.class)
-	    public void loginWithValidCredentials(String email, String password ) throws InterruptedException {
+	    public void loginWithValidCredentials(String email, String password) throws InterruptedException {
 	    	signinpage = new SignInPage(driver);
 	    	signinpage.enterEmail(email);
 	    	signinpage.enterPassword(password);
