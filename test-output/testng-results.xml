@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-02T12:58:27 EDT" name="Default suite" finished-at="2024-06-02T12:58:36 EDT" duration-ms="9025">
+    <groups>
+    </groups>
+    <test started-at="2024-06-02T12:58:27 EDT" name="Default test" finished-at="2024-06-02T12:58:36 EDT" duration-ms="9025">
+      <class name="com.magento.TestCases.LoginTest">
+        <test-method is-config="true" signature="createLoginSetup()[pri:0, instance:com.magento.TestCases.LoginTest@3023df74]" started-at="2024-06-02T12:58:27 EDT" name="createLoginSetup" finished-at="2024-06-02T12:58:31 EDT" duration-ms="4067" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLoginSetup -->
+        <test-method signature="loginWithInvalidCredentials()[pri:2, instance:com.magento.TestCases.LoginTest@3023df74]" started-at="2024-06-02T12:58:31 EDT" name="loginWithInvalidCredentials" finished-at="2024-06-02T12:58:36 EDT" duration-ms="4597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.magento.TestCases.LoginTest@3023df74]" started-at="2024-06-02T12:58:36 EDT" name="tearDown" finished-at="2024-06-02T12:58:36 EDT" duration-ms="268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.magento.TestCases.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
