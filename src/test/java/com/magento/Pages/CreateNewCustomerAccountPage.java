@@ -36,28 +36,17 @@ public class CreateNewCustomerAccountPage {
 	}
 	
 	
-	public void enterFirstname(String firstnametext) {
+
+	
+	public MyAccountPage navigateToMyAccountPage(String firstnametext, String lastnametext, String emailtext, String passwordtext, String confirmpasswordtext) {
 		firstnameTextBox.sendKeys(firstnametext);
-	}
-	
-	public void enterLastname(String lastnametext) {
 		lastnameTextBox.sendKeys(lastnametext);
-	}
-	
-	public void enterEmail(String emailtext) {
 		emailTextBox.sendKeys(emailtext);
-	}
-	
-	public void enterPassword(String passwordtext) {
 		passwordTextBox.sendKeys(passwordtext);
-	}
-	
-	public void enterConfirmPassword(String confirmpasswordtext) {
 		passwordconfirmationTextBox.sendKeys(confirmpasswordtext);
-	}
-	
-	public void clickOnCreateAccountButton() {
 		createAccountButton.click();
+		return new MyAccountPage(driver);
+		
 	}
 	
 	

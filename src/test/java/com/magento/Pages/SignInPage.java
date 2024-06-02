@@ -25,17 +25,12 @@ public class SignInPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	public void enterEmail(String emailText) {
+		
+	public WelcomePage navigateToWelcomePage(String emailText, String passwordText) {
 		emailTextBox.sendKeys(emailText);
-	}
-
-	public void enterPassword(String passwordText) {
 		passwordTextBox.sendKeys(passwordText);
-	}
-	
-	public void clickOnSigninButton() {
 		signinbutton.click();
+		return new WelcomePage(driver);
 	}
 	
 	public boolean displayStatusWarningMessage() {

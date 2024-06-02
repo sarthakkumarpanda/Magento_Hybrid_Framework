@@ -24,12 +24,15 @@ public class HomePage {
 	}
 	
 	
-	public void clickOnSignInLink() {
+	public SignInPage clickOnSignInLink() {
 		singinLink.click();
+		return new SignInPage(driver);
+		
 	}
 	
-	public void clickOnCreateAccountLink() {
+	public CreateNewCustomerAccountPage clickOnCreateAccountLink() {
 		createAccountLink.click();	
+		return new CreateNewCustomerAccountPage(driver);
 	}
 
 }

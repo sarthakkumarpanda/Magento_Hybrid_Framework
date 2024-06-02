@@ -26,8 +26,9 @@ public class WelcomePage {
 		welcomeDropdown.click();
 	}
 	
-	public void clickOnMyAccountOption() {
+	public MyAccountPage clickOnMyAccountOption() {
 		MyAccountOption.click();
+		return new MyAccountPage(driver);
 	}
 
 }

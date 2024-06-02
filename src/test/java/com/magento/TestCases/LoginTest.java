@@ -29,29 +29,22 @@ public class LoginTest extends TestBase	{
 	    @BeforeMethod
 	    public void createLoginSetup(){
 	        driver = initializeBrowserAndOpenApplication("Chrome");
-	        homepage = new HomePage(driver);
-	        homepage.clickOnSignInLink();
+	        //homepage.clickOnSignInLink(); //this actions leads to system navigating to SignInPage
+	        signinpage = homepage.clickOnSignInLink(); 
 	    }
 	    
 	    @Test(priority=1, dataProvider = "LoginMAGENTO", dataProviderClass = ExcelCode.class)
 	    public void loginWithValidCredentials(String email, String password) throws InterruptedException {
-	    	signinpage = new SignInPage(driver);
-	    	signinpage.enterEmail(email);
-	    	signinpage.enterPassword(password);
-	    	signinpage.clickOnSigninButton();
+	     	signinpage.navigateToWelcomePage(email, password);
 	    	welcomepage = new WelcomePage(driver);
 	    	welcomepage.clickOnWelcomeDropdown();
-	    	welcomepage.clickOnMyAccountOption();
-	    	myaccountpage = new MyAccountPage(driver);
+	    	myaccountpage = welcomepage.clickOnMyAccountOption(); //this returns MyAccountPage
 	    	myaccountpage.displayStatusOfMyOrdersLink(); 	
 	    }
 	    
 	    @Test(priority=2)
 	    public void loginWithInvalidCredentials() throws InterruptedException {
-	    	signinpage = new SignInPage(driver);
-	    	signinpage.enterEmail(prop.getProperty("validEmail"));
-	    	signinpage.enterPassword(dataprop.getProperty("invalidPassword"));
-	    	signinpage.clickOnSigninButton();
+	    	signinpage.navigateToWelcomePage(prop.getProperty("validEmail"), dataprop.getProperty("invalidPassword"));
 	    	Thread.sleep(3000);
 	    	Assert.assertTrue(signinpage.displayStatusWarningMessage());
 	    }

@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="createAccountSetup"/>
-          <include name="createAccountWithMandatoryDetails" invocation-numbers="0"/>
+          <include name="createAccountWithMandatoryDetails"/>
         </methods>
       </class> <!-- com.magento.TestCases.CreateAccountTest -->
     </classes>
