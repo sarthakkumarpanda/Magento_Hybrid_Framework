@@ -1,5 +1,6 @@
 package com.magento.Listeners;
 
+import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 
@@ -65,6 +66,8 @@ public class VerifyListener implements ITestListener {
 		}
 		
 		extentTest.addScreenCaptureFromPath(destinationFile);
+		extentTest.log(Status.INFO, result.getThrowable());
+		extentTest.log(Status.FAIL, testName +  "got failed");
 	}
 
 	@Override
@@ -76,6 +79,13 @@ public class VerifyListener implements ITestListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		extentReport.flush();
+		String pathOfExtentReport = System.getProperty("user.dir")+"\\test-output\\ExtentReports\\extentreporterMagento.html";
+		File extentReport = new File(pathOfExtentReport);
+		try {
+			Desktop.getDesktop().browse(extentReport.toURI());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

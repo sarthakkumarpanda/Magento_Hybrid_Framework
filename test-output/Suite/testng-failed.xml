@@ -6,13 +6,13 @@
   </listeners>
   <test name="Test(failed)">
     <classes>
-      <class name="com.magento.TestCases.CreateAccountTest">
+      <class name="com.magento.TestCases.LoginTest">
         <methods>
+          <include name="createLoginSetup"/>
           <include name="tearDown"/>
-          <include name="createAccountSetup"/>
-          <include name="createAccountWithMandatoryDetails" invocation-numbers="4"/>
+          <include name="loginWithInvalidCredentials"/>
         </methods>
-      </class> <!-- com.magento.TestCases.CreateAccountTest -->
+      </class> <!-- com.magento.TestCases.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

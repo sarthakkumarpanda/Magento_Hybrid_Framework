@@ -47,7 +47,7 @@ public class LoginTest extends TestBase	{
 	    public void loginWithInvalidCredentials() throws InterruptedException {
 	    	signinpage.navigateToWelcomePage(prop.getProperty("validEmail"), dataprop.getProperty("invalidPassword"));
 	    	Thread.sleep(3000);
-	    	Assert.assertTrue(signinpage.displayStatusWarningMessage());
+	    	Assert.assertFalse(signinpage.displayStatusWarningMessage()); //deliberately failing
 	    }
 	    
 	    
