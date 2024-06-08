@@ -30,6 +30,7 @@ public class LoginTest extends TestBase	{
 	    public void createLoginSetup(){
 	        driver = initializeBrowserAndOpenApplication("Chrome");
 	        //homepage.clickOnSignInLink(); //this actions leads to system navigating to SignInPage
+	        homepage = new HomePage(driver);
 	        signinpage = homepage.clickOnSignInLink(); 
 	    }
 	    
