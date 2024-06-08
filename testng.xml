@@ -3,7 +3,7 @@
 <suite name="Suite">
 
 <listeners>
-      <listener class-name = "com.magento.Listeners.MyListener" />
+      <listener class-name = "com.magento.Listeners.VerifyListener" />
 </listeners>
 
 

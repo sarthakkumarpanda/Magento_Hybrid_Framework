@@ -2,6 +2,7 @@ package com.magento.Listeners;
 
 import java.io.File;
 import java.io.IOException;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -9,47 +10,44 @@ import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.tutorialsninja.qa.Utilities.ExtentReporter;
 
-public class MyListener implements ITestListener{
-	
-	public String testName;
+public class VerifyListener implements ITestListener {
+
 	public ExtentReports extentReport;
 	public ExtentTest extentTest;
-	
+
 	@Override
 	public void onStart(ITestContext context) {
-		//System.out.println("Project Execution Started");
 		try {
 			extentReport = ExtentReporter.generateExtentReporter();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		testName = result.getTestName();
-		//System.out.println(testName + "--> started executing");
+		String testName = result.getName();
+		System.out.println(testName + "----> Project Execution Started");
 		extentTest = extentReport.createTest(testName);
 		extentTest.log(Status.INFO, testName + "--> started executing");
+
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		testName = result.getTestName();
-		//System.out.println(testName + "--> testCase PASSED");
+		String testName = result.getTestName();
 		extentTest.log(Status.PASS, testName + "--> started executing");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		String testName = result.getTestName();
-		//System.out.println(testName + "--> testCase FAILED");
 		WebDriver driver = null;
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
@@ -71,16 +69,12 @@ public class MyListener implements ITestListener{
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		testName = result.getTestName();
-		//System.out.println(testName + "--> testCase SKIPPED");
+		String testName = result.getTestName();
 		extentTest.log(Status.SKIP, testName + "--> started executing");
 	}
 
-	
-
 	@Override
 	public void onFinish(ITestContext context) {
-		//System.out.println("Project Execution Finished");
 		extentReport.flush();
 	}
 

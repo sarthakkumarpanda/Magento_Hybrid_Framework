@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jun 08 11:53:53 EDT 2024</td>
+<td>Started on:</td><td>Sat Jun 08 12:24:38 EDT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>148 seconds (148644 ms)</td>
+<tr><td>Total time:</td><td>135 seconds (135884 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,100 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#firstname&quot;}
+  (Session info: chrome=125.0.6422.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [51ea66d67897e25ac7397825649553c7, findElement {using=id, value=firstname}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\sarth\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58649}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58649/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 51ea66d67897e25ac7397825649553c7
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at com.magento.Pages.CreateNewCustomerAccountPage.navigateToMyAccountPage(CreateNewCustomerAccountPage.java:42)
+	at com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails(CreateAccountTest.java:36)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1005344801", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1005344801'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#firstname&quot;}
+  (Session info: chrome=125.0.6422.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [51ea66d67897e25ac7397825649553c7, findElement {using=id, value=firstname}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\sarth\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58649}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58649/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 51ea66d67897e25ac7397825649553c7
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at com.magento.Pages.CreateNewCustomerAccountPage.navigateToMyAccountPage(CreateNewCustomerAccountPage.java:42)
+	at com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails(CreateAccountTest.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -77,37 +171,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.magento.TestCases.CreateAccountTest.createAccountWithInvalidConfirmPassword()'><b>createAccountWithInvalidConfirmPassword</b><br>Test class: com.magento.TestCases.CreateAccountTest</td>
 <td></td>
-<td>2</td>
-<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
-<tr>
-<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
-<td></td>
-<td>10</td>
-<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
-<tr>
-<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
-<td></td>
-<td>7</td>
-<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
-<tr>
-<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
-<td></td>
-<td>6</td>
-<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
-<tr>
-<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
-<td></td>
-<td>11</td>
-<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
-<tr>
-<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
-<td></td>
-<td>6</td>
-<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
-<tr>
-<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
-<td></td>
-<td>7</td>
+<td>1</td>
 <td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
 <tr>
 <td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
@@ -118,6 +182,31 @@ function toggleAllBoxes() {
 <td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
 <td></td>
 <td>8</td>
+<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
+<tr>
+<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
+<td></td>
+<td>7</td>
+<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
+<tr>
+<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
+<td></td>
+<td>6</td>
+<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
+<tr>
+<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
+<td></td>
+<td>8</td>
+<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
+<tr>
+<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
+<td></td>
+<td>6</td>
+<td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
+<tr>
+<td title='com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails()'><b>createAccountWithMandatoryDetails</b><br>Test class: com.magento.TestCases.CreateAccountTest<br>Parameters: Selenium, Panda, Selenium@123, Selenium@123</td>
+<td></td>
+<td>6</td>
 <td>com.magento.TestCases.CreateAccountTest@480d3575</td></tr>
 <tr>
 <td title='com.magento.TestCases.LoginTest.loginWithInvalidCredentials()'><b>loginWithInvalidCredentials</b><br>Test class: com.magento.TestCases.LoginTest</td>
@@ -132,7 +221,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.magento.TestCases.LoginTest.loginWithValidCredentials()'><b>loginWithValidCredentials</b><br>Test class: com.magento.TestCases.LoginTest<br>Parameters: seleniumpanda1@gmail.com, Selenium@123</td>
 <td></td>
-<td>6</td>
+<td>3</td>
 <td>com.magento.TestCases.LoginTest@f1da57d</td></tr>
 </table><p>
 </body>

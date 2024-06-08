@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods,   12 passed</span>
+                    <span class="method-stats">12 methods, 1 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.magento.TestCases.CreateAccountTest" class="method navigator-link" hash-for-method="createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -142,22 +156,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.magento.TestCases.CreateAccountTest" class="method navigator-link" hash-for-method="createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.magento.TestCases.LoginTest" class="method navigator-link" hash-for-method="loginWithInvalidCredentials">loginWithInvalidCredentials</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.magento.TestCases.LoginTest" class="method navigator-link" hash-for-method="loginWithValidCredentials(seleniumpanda@gmail.com, Selenium@123)">loginWithValidCredentials(seleniumpanda@gmail.com, Selenium@123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.magento.TestCases.LoginTest" class="method navigator-link" hash-for-method="loginWithValidCredentials(seleniumpanda1@gmail.com, Selenium@123)">loginWithValidCredentials(seleniumpanda1@gmail.com, Selenium@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.magento.TestCases.LoginTest" class="method navigator-link" hash-for-method="loginWithValidCredentials(seleniumpanda1@gmail.com, Selenium@123)">loginWithValidCredentials(seleniumpanda1@gmail.com, Selenium@123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.magento.TestCases.LoginTest" class="method navigator-link" hash-for-method="loginWithValidCredentials(seleniumpanda@gmail.com, Selenium@123)">loginWithValidCredentials(seleniumpanda@gmail.com, Selenium@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -172,6 +181,49 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.magento.TestCases.CreateAccountTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)">
+                  </a> <!-- createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123) -->
+                  <span class="method-name">createAccountWithMandatoryDetails</span>
+                  <span class="parameters">(Selenium, Panda, Selenium@123, Selenium@123)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#firstname&quot;}
+  (Session info: chrome=125.0.6422.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [51ea66d67897e25ac7397825649553c7, findElement {using=id, value=firstname}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.142, chrome: {chromedriverVersion: 125.0.6422.141 (4b1e8393712..., userDataDir: C:\Users\sarth\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58649}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58649/devtoo..., se:cdpVersion: 125.0.6422.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 51ea66d67897e25ac7397825649553c7
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at com.magento.Pages.CreateNewCustomerAccountPage.navigateToMyAccountPage(CreateNewCustomerAccountPage.java:42)
+	at com.magento.TestCases.CreateAccountTest.createAccountWithMandatoryDetails(CreateAccountTest.java:36)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -183,14 +235,6 @@
                   <a name="createAccountWithInvalidConfirmPassword">
                   </a> <!-- createAccountWithInvalidConfirmPassword -->
                   <span class="method-name">createAccountWithInvalidConfirmPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)">
-                  </a> <!-- createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123) -->
-                  <span class="method-name">createAccountWithMandatoryDetails</span>
-                  <span class="parameters">(Selenium, Panda, Selenium@123, Selenium@123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -266,18 +310,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithValidCredentials(seleniumpanda@gmail.com, Selenium@123)">
-                  </a> <!-- loginWithValidCredentials(seleniumpanda@gmail.com, Selenium@123) -->
-                  <span class="method-name">loginWithValidCredentials</span>
-                  <span class="parameters">(seleniumpanda@gmail.com, Selenium@123)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="loginWithValidCredentials(seleniumpanda1@gmail.com, Selenium@123)">
                   </a> <!-- loginWithValidCredentials(seleniumpanda1@gmail.com, Selenium@123) -->
                   <span class="method-name">loginWithValidCredentials</span>
                   <span class="parameters">(seleniumpanda1@gmail.com, Selenium@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithValidCredentials(seleniumpanda@gmail.com, Selenium@123)">
+                  </a> <!-- loginWithValidCredentials(seleniumpanda@gmail.com, Selenium@123) -->
+                  <span class="method-name">loginWithValidCredentials</span>
+                  <span class="parameters">(seleniumpanda@gmail.com, Selenium@123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -293,7 +337,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.magento.Listeners.MyListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.magento.Listeners.VerifyListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
@@ -342,51 +386,51 @@ data.addRows(12);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createAccountWithMandatoryDetails')
 data.setCell(0, 2, 'com.magento.TestCases.CreateAccountTest')
-data.setCell(0, 3, 11301);
+data.setCell(0, 3, 10060);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'createAccountWithMandatoryDetails')
 data.setCell(1, 2, 'com.magento.TestCases.CreateAccountTest')
-data.setCell(1, 3, 10149);
+data.setCell(1, 3, 8380);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'createAccountWithMandatoryDetails')
 data.setCell(2, 2, 'com.magento.TestCases.CreateAccountTest')
-data.setCell(2, 3, 8210);
+data.setCell(2, 3, 8063);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'createAccountWithMandatoryDetails')
 data.setCell(3, 2, 'com.magento.TestCases.CreateAccountTest')
-data.setCell(3, 3, 7957);
+data.setCell(3, 3, 7438);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'createAccountWithMandatoryDetails')
 data.setCell(4, 2, 'com.magento.TestCases.CreateAccountTest')
-data.setCell(4, 3, 7161);
+data.setCell(4, 3, 7069);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'createAccountWithMandatoryDetails')
 data.setCell(5, 2, 'com.magento.TestCases.CreateAccountTest')
-data.setCell(5, 3, 7130);
+data.setCell(5, 3, 6933);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'createAccountWithMandatoryDetails')
 data.setCell(6, 2, 'com.magento.TestCases.CreateAccountTest')
-data.setCell(6, 3, 6550);
+data.setCell(6, 3, 6109);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'loginWithValidCredentials')
-data.setCell(7, 2, 'com.magento.TestCases.LoginTest')
-data.setCell(7, 3, 6521);
+data.setCell(7, 1, 'createAccountWithMandatoryDetails')
+data.setCell(7, 2, 'com.magento.TestCases.CreateAccountTest')
+data.setCell(7, 3, 6013);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'createAccountWithMandatoryDetails')
-data.setCell(8, 2, 'com.magento.TestCases.CreateAccountTest')
-data.setCell(8, 3, 6275);
+data.setCell(8, 1, 'loginWithInvalidCredentials')
+data.setCell(8, 2, 'com.magento.TestCases.LoginTest')
+data.setCell(8, 3, 5105);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'loginWithInvalidCredentials')
+data.setCell(9, 1, 'loginWithValidCredentials')
 data.setCell(9, 2, 'com.magento.TestCases.LoginTest')
-data.setCell(9, 3, 5822);
+data.setCell(9, 3, 3452);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'loginWithValidCredentials')
 data.setCell(10, 2, 'com.magento.TestCases.LoginTest')
-data.setCell(10, 3, 3077);
+data.setCell(10, 3, 3277);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'createAccountWithInvalidConfirmPassword')
 data.setCell(11, 2, 'com.magento.TestCases.CreateAccountTest')
-data.setCell(11, 3, 2027);
+data.setCell(11, 3, 1443);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -424,152 +468,154 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</span>
-                <span class="method-start">6322 ms</span>
+                <span class="method-start">5193 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">16485 ms</span>
+                <span class="method-start">12268 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">createAccountSetup</span>
-                <span class="method-start">16739 ms</span>
+                <span class="method-start">14177 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</span>
-                <span class="method-start">21782 ms</span>
+                <span class="method-start">20308 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29740 ms</span>
+                <span class="method-start">28691 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">createAccountSetup</span>
-                <span class="method-start">31506 ms</span>
+                <span class="method-start">28979 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</span>
-                <span class="method-start">35992 ms</span>
+                <span class="method-start">33481 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">42270 ms</span>
+                <span class="method-start">40920 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">createAccountSetup</span>
-                <span class="method-start">42529 ms</span>
+                <span class="method-start">41239 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</span>
-                <span class="method-start">48869 ms</span>
+                <span class="method-start">45672 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">60172 ms</span>
+                <span class="method-start">51782 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">createAccountSetup</span>
-                <span class="method-start">60612 ms</span>
+                <span class="method-start">51975 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</span>
-                <span class="method-start">64907 ms</span>
+                <span class="method-start">55794 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">71458 ms</span>
+                <span class="method-start">66360 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">createAccountSetup</span>
-                <span class="method-start">71743 ms</span>
+                <span class="method-start">66664 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</span>
-                <span class="method-start">75918 ms</span>
+                <span class="method-start">73690 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">83081 ms</span>
+                <span class="method-start">81754 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">createAccountSetup</span>
-                <span class="method-start">83259 ms</span>
+                <span class="method-start">81948 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</span>
-                <span class="method-start">87342 ms</span>
+                <span class="method-start">86078 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">94473 ms</span>
+                <span class="method-start">93013 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">createAccountSetup</span>
-                <span class="method-start">96241 ms</span>
+                <span class="method-start">93270 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createAccountWithMandatoryDetails(Selenium, Panda, Selenium@123, Selenium@123)</span>
-                <span class="method-start">101585 ms</span>
+                <span class="method-start">97978 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">109820 ms</span>
+                <span class="method-start">103992 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.magento.TestCases.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">createLoginSetup</span>
-                <span class="method-start">110222 ms</span>
+                <span class="method-start">104284 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithValidCredentials(seleniumpanda@gmail.com, Selenium@123)</span>
-                <span class="method-start">114325 ms</span>
+                <span class="method-start">108256 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">117406 ms</span>
+                <span class="method-start">111535 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">createLoginSetup</span>
-                <span class="method-start">117712 ms</span>
+                <span class="method-start">111755 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithValidCredentials(seleniumpanda1@gmail.com, Selenium@123)</span>
-                <span class="method-start">122760 ms</span>
+                <span class="method-start">115870 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">129282 ms</span>
+                <span class="method-start">119323 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.magento.TestCases.CreateAccountTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">createAccountSetup</span>
-                <span class="method-start">129459 ms</span>
+                <span class="method-start">119529 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createAccountWithInvalidConfirmPassword</span>
-                <span class="method-start">134631 ms</span>
+                <span class="method-start">123609 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">136660 ms</span>
+                <span class="method-start">125053 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.magento.TestCases.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">createLoginSetup</span>
-                <span class="method-start">136885 ms</span>
+                <span class="method-start">125243 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginWithInvalidCredentials</span>
-                <span class="method-start">141607 ms</span>
+                <span class="method-start">129157 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">147430 ms</span>
+                <span class="method-start">134270 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
